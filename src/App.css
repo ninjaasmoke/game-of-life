@@ -47,3 +47,38 @@ h1 {
 .buttons button:hover {
   background-color: var(--btnHov);
 }
+
+.smolscreen {
+  display: none;
+}
+
+@media (max-width: 728px) {
+  .smolscreen {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .smolscreen img {
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .smolscreen span {
+    margin-top: 40px;
+    font-weight: 400;
+    color: var(--btnHov);
+    font-size: 10px;
+  }
+
+  .App {
+    display: none;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "game-of-life",
-  "homepage": "https://ninjaasmoke.github.io/ninjaasmoke/game-of-life/",
+  "homepage": "https://ninjaasmoke.github.io/game-of-life/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

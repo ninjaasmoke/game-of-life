@@ -74,75 +74,82 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <>
+      <div className="App">
 
-      {/* control buttons */}
+        {/* control buttons */}
 
-      <div className="buttons">
-        <button
-          onClick={() => {
-            setSimulating(!simulating);
-            if (!simulating) {
-              simRef.current = true;
-              startSimulation();
-            }
+        <div className="buttons">
+          <button
+            onClick={() => {
+              setSimulating(!simulating);
+              if (!simulating) {
+                simRef.current = true;
+                startSimulation();
+              }
+            }}
+          >
+            {simulating ? "Stop" : "Start"} Sim
+          </button>
+          <button
+            onClick={() => {
+              const row = [];
+              for (let i = 0; i < gridSize; i++) {
+                row.push(
+                  Array.from(Array(gridSize), () => (Math.random() > 0.8 ? 1 : 0))
+                );
+              }
+
+              setGrid(row);
+            }}
+          >
+            Generate Random
+          </button>
+          <button
+            onClick={() => {
+              setGrid(emptyGrid(gridSize));
+            }}
+          >
+            Clear All
+          </button>
+        </div>
+
+        {/* Simulation grid */}
+
+        <div className="grid"
+          id="grid"
+          style={{
+            gridTemplateColumns: `repeat(${gridSize}, ${cellSize + 1}px)`,
+            gridTemplateRows: `repeat(${gridSize}, ${cellSize + 1}px)`,
           }}
         >
-          {simulating ? "Stop" : "Start"} Sim
-        </button>
-        <button
-          onClick={() => {
-            const row = [];
-            for (let i = 0; i < gridSize; i++) {
-              row.push(
-                Array.from(Array(gridSize), () => (Math.random() > 0.8 ? 1 : 0))
-              );
-            }
-
-            setGrid(row);
-          }}
-        >
-          Generate Random
-        </button>
-        <button
-          onClick={() => {
-            setGrid(emptyGrid(gridSize));
-          }}
-        >
-          Clear All
-        </button>
+          {
+            grid.map((rows, i) => rows.map((cols, j) => (
+              <div className="cell"
+                key={`${i}-${j}`}
+                onClick={() => {
+                  const newGrid = produce(grid, gridCopy => {
+                    gridCopy[i][j] = grid[i][j] ? 0 : 1;
+                  });
+                  setGrid(newGrid);
+                }}
+                style={{
+                  width: cellSize,
+                  height: cellSize,
+                  // backgroundColor: grid[i][j] ? 'var(--accent)' : 'var(--bg)',
+                  border: grid[i][j] ? '6px solid var(--accent)' : '1px solid var(--bgSec)'
+                }}
+              ></div>
+            )))
+          }
+        </div>
       </div>
-
-      {/* Simulation grid */}
-
-      <div className="grid"
-        id="grid"
-        style={{
-          gridTemplateColumns: `repeat(${gridSize}, ${cellSize + 1}px)`,
-          gridTemplateRows: `repeat(${gridSize}, ${cellSize + 1}px)`,
-        }}
-      >
-        {
-          grid.map((rows, i) => rows.map((cols, j) => (
-            <div className="cell"
-              key={`${i}-${j}`}
-              onClick={() => {
-                const newGrid = produce(grid, gridCopy => {
-                  gridCopy[i][j] = grid[i][j] ? 0 : 1;
-                });
-                setGrid(newGrid);
-              }}
-              style={{
-                width: cellSize,
-                height: cellSize,
-                // backgroundColor: grid[i][j] ? 'var(--accent)' : 'var(--bg)',
-                border: grid[i][j] ? '6px solid var(--accent)' : '1px solid var(--bgSec)'
-              }}
-            ></div>
-          )))
-        }
+      <div className="smolscreen">
+        <p>Smol screen</p>
+        <img src="https://icon2.cleanpng.com/20180401/zww/kisspng-shiba-inu-dogecoin-clip-art-doge-5ac19a4e7ef1f4.89995344152263739052.jpg" alt="" />
+        <span>Fake png :(</span>
       </div>
-    </div>
+    </>
   );
 }
 
