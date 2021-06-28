@@ -21,9 +21,7 @@ h1 {
   border: 1px solid var(--bgSec);
   transition: all 300ms ease-in;
   cursor: pointer;
-
-  font-weight: 400;
-  font-size: 6px;
+  border-radius: 4px;
 }
 
 .cell:hover {

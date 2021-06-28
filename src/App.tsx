@@ -118,7 +118,8 @@ function App() {
       <div className="grid"
         id="grid"
         style={{
-          gridTemplateColumns: `repeat(${gridSize}, ${cellSize}px)`
+          gridTemplateColumns: `repeat(${gridSize}, ${cellSize + 1}px)`,
+          gridTemplateRows: `repeat(${gridSize}, ${cellSize + 1}px)`,
         }}
       >
         {
