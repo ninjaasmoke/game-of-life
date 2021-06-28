@@ -5,33 +5,23 @@ import { produce } from 'immer';
 
 function App() {
 
-  const [rows, setRows] = useState(30);
-  const [cols, setCols] = useState(30);
+  const [gridSize, setGridSize] = useState(20);
 
-  const [cellSize, setCellSize] = useState(18);
+  const [cellSize, setCellSize] = useState(22);
 
-  const emptyGrid = (rows: number, col: number = cols) => {
-    let row = [];
-    for (let i = 0; i < rows; i++) {
-      row.push(Array.from(Array(col), () => 0));
+  const emptyGrid = (gridN: number = gridSize) => {
+    const grid = [];
+    for (let i = 0; i < gridN; i++) {
+      grid.push(
+        Array.from(Array(gridN), () => 0)
+      );
     }
-    return row;
+    return grid;
   }
 
 
-  useEffect(() => {
-    // const c = Math.floor((window.innerWidth) / 20);
-    // const r = Math.floor((window.innerHeight) / 20);
-    // setRows(r);
-    // setCols(c);
 
-    // console.log(r, c)
-
-    setGrid(emptyGrid(30, 30));
-  }, []);
-
-
-  const [grid, setGrid] = useState<number[][]>([[]]);
+  const [grid, setGrid] = useState<number[][]>(() => emptyGrid());
 
 
   const neighOps = [
@@ -57,13 +47,13 @@ function App() {
 
     setGrid((grid) => {
       return produce(grid, (gridCopy: number[][]) => {
-        for (let i = 0; i < rows; i++) {
-          for (let k = 0; k < cols; k++) {
+        for (let i = 0; i < gridSize; i++) {
+          for (let k = 0; k < gridSize; k++) {
             let neighbors = 0;
             neighOps.forEach(([x, y]) => {
               const newI = i + x;
               const newK = k + y;
-              if (newI >= 0 && newI < rows && newK >= 0 && newK < cols) {
+              if (newI >= 0 && newI < gridSize && newK >= 0 && newK < gridSize) {
                 neighbors += grid[newI][newK];
               }
             });
@@ -103,9 +93,9 @@ function App() {
         <button
           onClick={() => {
             const row = [];
-            for (let i = 0; i < cols; i++) {
+            for (let i = 0; i < gridSize; i++) {
               row.push(
-                Array.from(Array(rows), () => (Math.random() > 0.8 ? 1 : 0))
+                Array.from(Array(gridSize), () => (Math.random() > 0.8 ? 1 : 0))
               );
             }
 
@@ -116,7 +106,7 @@ function App() {
         </button>
         <button
           onClick={() => {
-            setGrid(emptyGrid(rows, cols));
+            setGrid(emptyGrid(gridSize));
           }}
         >
           Clear All
@@ -128,7 +118,7 @@ function App() {
       <div className="grid"
         id="grid"
         style={{
-          gridTemplateColumns: `repeat(${cols}, ${cellSize}px)`
+          gridTemplateColumns: `repeat(${gridSize}, ${cellSize}px)`
         }}
       >
         {

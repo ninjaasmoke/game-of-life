@@ -4,7 +4,7 @@
   padding: 6px;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
 }
@@ -19,8 +19,11 @@ h1 {
 
 .cell {
   border: 1px solid var(--bgSec);
-  transition: all 200ms ease-in;
+  transition: all 300ms ease-in;
   cursor: pointer;
+
+  font-weight: 400;
+  font-size: 6px;
 }
 
 .cell:hover {
