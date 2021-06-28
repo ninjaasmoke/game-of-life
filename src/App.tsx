@@ -85,6 +85,9 @@ function App() {
 
   return (
     <div className="App">
+
+      {/* control buttons */}
+
       <div className="buttons">
         <button
           onClick={() => {
@@ -102,7 +105,7 @@ function App() {
             const row = [];
             for (let i = 0; i < cols; i++) {
               row.push(
-                Array.from(Array(rows), () => (Math.random() > 0.7 ? 1 : 0))
+                Array.from(Array(rows), () => (Math.random() > 0.8 ? 1 : 0))
               );
             }
 
@@ -119,6 +122,9 @@ function App() {
           Clear All
         </button>
       </div>
+
+      {/* Simulation grid */}
+
       <div className="grid"
         id="grid"
         style={{
@@ -138,7 +144,7 @@ function App() {
               style={{
                 width: cellSize,
                 height: cellSize,
-                // backgroundColor: grid[i][j] ? 'var(--accent)' : 'unset',
+                // backgroundColor: grid[i][j] ? 'var(--accent)' : 'var(--bg)',
                 border: grid[i][j] ? '6px solid var(--accent)' : '1px solid var(--bgSec)'
               }}
             ></div>

@@ -19,7 +19,7 @@ h1 {
 
 .cell {
   border: 1px solid var(--bgSec);
-  transition-duration: 400ms;
+  transition: all 200ms ease-in;
   cursor: pointer;
 }
 
