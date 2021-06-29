@@ -25,14 +25,14 @@ function App() {
 
 
   const neighOps = [
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
     [0, 1],
     [0, -1],
     [1, -1],
-    [-1, 1],
-    [1, 1],
-    [-1, -1],
     [1, 0],
-    [-1, 0]
+    [1, 1],
   ];
 
   const [simulating, setSimulating] = useState(false);
