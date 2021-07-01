@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/game-of-life/static/css/main.982f7320.chunk.css",
-    "main.js": "/game-of-life/static/js/main.2a8c4689.chunk.js",
-    "main.js.map": "/game-of-life/static/js/main.2a8c4689.chunk.js.map",
-    "runtime-main.js": "/game-of-life/static/js/runtime-main.bb5fb546.js",
-    "runtime-main.js.map": "/game-of-life/static/js/runtime-main.bb5fb546.js.map",
-    "static/js/2.ddf39055.chunk.js": "/game-of-life/static/js/2.ddf39055.chunk.js",
-    "static/js/2.ddf39055.chunk.js.map": "/game-of-life/static/js/2.ddf39055.chunk.js.map",
-    "static/js/3.066b1fd3.chunk.js": "/game-of-life/static/js/3.066b1fd3.chunk.js",
-    "static/js/3.066b1fd3.chunk.js.map": "/game-of-life/static/js/3.066b1fd3.chunk.js.map",
+    "main.css": "/game-of-life/static/css/main.bc97dd7f.chunk.css",
+    "main.js": "/game-of-life/static/js/main.9d086572.chunk.js",
+    "main.js.map": "/game-of-life/static/js/main.9d086572.chunk.js.map",
+    "runtime-main.js": "/game-of-life/static/js/runtime-main.bbf9d3f0.js",
+    "runtime-main.js.map": "/game-of-life/static/js/runtime-main.bbf9d3f0.js.map",
+    "static/js/2.72db2662.chunk.js": "/game-of-life/static/js/2.72db2662.chunk.js",
+    "static/js/2.72db2662.chunk.js.map": "/game-of-life/static/js/2.72db2662.chunk.js.map",
+    "static/js/3.32b23d2f.chunk.js": "/game-of-life/static/js/3.32b23d2f.chunk.js",
+    "static/js/3.32b23d2f.chunk.js.map": "/game-of-life/static/js/3.32b23d2f.chunk.js.map",
     "index.html": "/game-of-life/index.html",
     "service-worker.js": "/game-of-life/service-worker.js",
     "service-worker.js.map": "/game-of-life/service-worker.js.map",
-    "static/css/main.982f7320.chunk.css.map": "/game-of-life/static/css/main.982f7320.chunk.css.map",
-    "static/js/2.ddf39055.chunk.js.LICENSE.txt": "/game-of-life/static/js/2.ddf39055.chunk.js.LICENSE.txt"
+    "static/css/main.bc97dd7f.chunk.css.map": "/game-of-life/static/css/main.bc97dd7f.chunk.css.map",
+    "static/js/2.72db2662.chunk.js.LICENSE.txt": "/game-of-life/static/js/2.72db2662.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bb5fb546.js",
-    "static/js/2.ddf39055.chunk.js",
-    "static/css/main.982f7320.chunk.css",
-    "static/js/main.2a8c4689.chunk.js"
+    "static/js/runtime-main.bbf9d3f0.js",
+    "static/js/2.72db2662.chunk.js",
+    "static/css/main.bc97dd7f.chunk.css",
+    "static/js/main.9d086572.chunk.js"
   ]
 }
