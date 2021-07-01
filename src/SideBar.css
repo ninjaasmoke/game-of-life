@@ -1,0 +1,74 @@
+.sideBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 6px;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--sideBarCol);
+}
+
+/* https://apps.kaonadn.net/5181491956940800/index.html */
+
+.side-elem {
+    padding: 8px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    border-radius: 40px;
+    transition-duration: 200ms;
+    align-items: center;
+    font-weight: 700;
+    overflow: hidden;
+    height: 36px;
+    font-size: 14px;
+}
+
+.side-elem:hover {
+    background-color: var(--btnHov);
+} 
+
+.side-elem img {
+    width: 14px;
+    height: 14px;
+}
+
+.option {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    color: var(--accent);
+}
+
+.option-name {
+    font-weight: 900;
+    font-size: 14px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--btnHov);
+    color: var(--accent);
+}
+
+select {
+    border-radius: 4px;
+    padding: 6px 12px;
+    text-align: center;
+
+    background-color: var(--bg);
+    color: var(--color);
+}
+
+option, select {
+    border: none;
+    outline: none;
+    font-weight: 700;
+}
+
+option {
+    padding: 6px 12px;
+}

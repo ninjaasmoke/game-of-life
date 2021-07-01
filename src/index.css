@@ -1,10 +1,11 @@
 :root {
   --bg: #081018;
+  --bgSec: #182828;
 
   --accent: #d44446;
   --accentHov: #d4444699;
 
-  --bgSec: #182828;
+  --sideBarCol: #0f161f;
 
   --btnCol: #182833;
   --btnHov: #283843;

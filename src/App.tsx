@@ -1,29 +1,18 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './App.css';
 import { produce } from 'immer';
+import SideBar from './SideBar';
+import { useAppContext } from './AppContext';
 
 
 function App() {
-
-  const [gridSize, setGridSize] = useState(20);
-
-  const [cellSize, setCellSize] = useState(22);
-
-  const emptyGrid = (gridN: number = gridSize) => {
-    const grid = [];
-    for (let i = 0; i < gridN; i++) {
-      grid.push(
-        Array.from(Array(gridN), () => 0)
-      );
-    }
-    return grid;
-  }
-
-
-
-  const [grid, setGrid] = useState<number[][]>(() => emptyGrid());
-
-
+  const {
+    gridSize,
+    cellSize,
+    emptyGrid,
+    grid,
+    setGrid,
+    updateGrid } = useAppContext();
   const neighOps = [
     [-1, -1],
     [-1, 0],
@@ -45,7 +34,7 @@ function App() {
       return;
     }
 
-    setGrid((grid) => {
+    setGrid && setGrid((grid) => {
       return produce(grid, (gridCopy: number[][]) => {
         for (let i = 0; i < gridSize; i++) {
           for (let k = 0; k < gridSize; k++) {
@@ -100,14 +89,14 @@ function App() {
                 );
               }
 
-              setGrid(row);
+              updateGrid(row);
             }}
           >
             Generate Random
           </button>
           <button
             onClick={() => {
-              setGrid(emptyGrid(gridSize));
+              emptyGrid && updateGrid(emptyGrid(gridSize));
             }}
           >
             Clear All
@@ -131,18 +120,23 @@ function App() {
                   const newGrid = produce(grid, gridCopy => {
                     gridCopy[i][j] = grid[i][j] ? 0 : 1;
                   });
-                  setGrid(newGrid);
+                  updateGrid(newGrid);
                 }}
                 style={{
                   width: cellSize,
                   height: cellSize,
                   // backgroundColor: grid[i][j] ? 'var(--accent)' : 'var(--bg)',
-                  border: grid[i][j] ? '6px solid var(--accent)' : '1px solid var(--bgSec)'
+                  border: grid[i][j] ? '7px solid var(--accent)' : '1px solid var(--bgSec)'
                 }}
               ></div>
             )))
           }
         </div>
+
+        {/* Options */}
+
+        <SideBar />
+
       </div>
       <div className="smolscreen">
         <p>Smol screen</p>

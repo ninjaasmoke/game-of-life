@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import AppWrapper from './AppContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppWrapper>
+      <App />
+    </AppWrapper>
   </React.StrictMode>,
   document.getElementById('root')
 );
