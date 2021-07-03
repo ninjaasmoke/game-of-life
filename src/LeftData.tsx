@@ -23,7 +23,7 @@ const LeftData: React.FC = () => {
                     <p>Ratio: </p>
                 </div>
                 <div className="data-data">
-                    <p>{(alive / (900 - alive)).toPrecision(2)}</p>
+                    <p>{(alive / (900 - alive) * 100).toPrecision(2)}%</p>
                 </div>
             </div>
         </div>
