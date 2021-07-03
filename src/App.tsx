@@ -134,13 +134,10 @@ function App() {
           }
         </div>
 
-        {/* Options */}
+        {/* Data */}
 
         <SideBar />
 
-        {/* Data */}
-
-        {/* <LeftData /> */}
 
       </div>
       <div className="smolscreen">

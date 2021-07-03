@@ -55,7 +55,7 @@ h1 {
   display: none;
 }
 
-@media (max-width: 728px) {
+@media (max-width: 800px) {
   .smolscreen {
     display: flex;
     width: 100%;
@@ -70,7 +70,7 @@ h1 {
   }
 
   .smolscreen img {
-    width: 70%;
+    width: 200px;
     margin-top: 20px;
   }
 
