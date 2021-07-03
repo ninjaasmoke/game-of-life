@@ -7,6 +7,7 @@ import settings from './assets/settings.png';
 import collapse from './assets/collapse.png';
 import { useRef } from "react";
 import { useAppContext } from "./AppContext";
+import LeftData from "./LeftData";
 
 interface SideProps { }
 const SideBar: React.FC<SideProps> = () => {
@@ -15,7 +16,7 @@ const SideBar: React.FC<SideProps> = () => {
 
     const densityRef = useRef<HTMLSelectElement>(null);
 
-    const [sideBarOpen, setSideBarOpen] = useState(false);
+    const [sideBarOpen, setSideBarOpen] = useState(true);
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -53,7 +54,7 @@ const SideBar: React.FC<SideProps> = () => {
         <motion.div
             className="sideBar"
             initial={{ width: 52 }}
-            animate={{ width: sideBarOpen ? 160 : 52 }}
+            animate={{ width: sideBarOpen ? 300 : 52 }}
             transition={{ duration: 0.4 }}
         >
             <motion.div
@@ -63,16 +64,9 @@ const SideBar: React.FC<SideProps> = () => {
                 animate={sideBarOpen ? "show" : "hidden"}
             >
                 <motion.div className="option" variants={slideItem}>
-                    <div className="option-name">
-                        Population
-                    </div>
-                    {/* <select className="option-values" ref={densityRef} onChange={densityChange}>
-                        <option value="20" defaultChecked>Low</option>
-                        <option value="30">Medium</option>
-                        <option value="40">High</option>
-                    </select> */}
+                    <LeftData />
                 </motion.div>
-                <motion.div className="option" variants={slideItem}>
+                {/* <motion.div className="option" variants={slideItem}>
                     <div className="option-name">
                         Density
                     </div>
@@ -81,7 +75,7 @@ const SideBar: React.FC<SideProps> = () => {
                         <option value="30">Medium</option>
                         <option value="40">High</option>
                     </select>
-                </motion.div>
+                </motion.div> */}
             </motion.div>
             <div className="side-elem"
                 style={{ padding: '12px 0px' }}

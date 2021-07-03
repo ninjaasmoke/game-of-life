@@ -19,7 +19,7 @@
     padding: 8px 0;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     cursor: pointer;
     border-radius: 40px;
     transition-duration: 200ms;
@@ -37,6 +37,10 @@
 .side-elem img {
     width: 14px;
     height: 14px;
+}
+
+.side-elem p {
+    margin-left: 12px;
 }
 
 .option {

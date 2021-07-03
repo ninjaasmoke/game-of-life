@@ -1,9 +1,4 @@
 .leftData {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-
     padding: 12px;
 
     display: flex;
@@ -11,9 +6,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    width: 180px;
-    height: 240px;
-
+    width: 100%;
 }
 
 .leftData h4 {
@@ -30,9 +23,14 @@
 .data-data {
     width: 100%;
     text-align: center;
+    color: var(--color)
 }
 
 .data-data p {
     font-size: 14px;
     margin: 8px 0;
+}
+
+.graph {
+    padding: 12px 8px;
 }
