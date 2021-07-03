@@ -35,7 +35,7 @@ export default function AppWrapper({ children }: { children: any }) {
         }
         return grid;
     }
-    const [gridSize, setGridSize] = useState(20);
+    const [gridSize, setGridSize] = useState(30);
 
     const updateGridSize = (size: number) => {
         setGridSize(size);

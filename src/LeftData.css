@@ -1,0 +1,39 @@
+.leftData {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 240px;
+    height: 240px;
+
+    border: 1px solid var(--bgSec);
+}
+
+.leftData h4 {
+    color: var(--accent);
+    margin: 0 0 12px;
+}
+
+.data {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.data-data {
+    width: 100%;
+    text-align: center;
+}
+
+.data-data p {
+    font-size: 14px;
+    margin: 8px 0;
+}

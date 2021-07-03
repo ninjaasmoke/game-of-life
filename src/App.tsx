@@ -3,6 +3,7 @@ import './App.css';
 import { produce } from 'immer';
 import SideBar from './SideBar';
 import { useAppContext } from './AppContext';
+import LeftData from './LeftData';
 
 
 function App() {
@@ -135,7 +136,11 @@ function App() {
 
         {/* Options */}
 
-        <SideBar />
+        {/* <SideBar /> */}
+
+        {/* Data */}
+
+        <LeftData />
 
       </div>
       <div className="smolscreen">
