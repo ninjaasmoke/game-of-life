@@ -97,7 +97,7 @@ const LeftData: React.FC = () => {
                         }
                     }
                 }}
-                height={200} width={300} />
+                height={180} width={300} />
             <Line
                 className="graph"
                 type="line"
@@ -123,7 +123,7 @@ const LeftData: React.FC = () => {
                     }
                 }
                 }
-                height={200} width={300} />
+                height={180} width={300} />
 
         </div>
     );
