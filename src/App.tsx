@@ -142,6 +142,7 @@ function App() {
       </div>
       <div className="smolscreen">
         <p>Smol screen</p>
+        <span>Try opening on a laptop or desktop mode.</span>
         <img src="https://icon2.cleanpng.com/20180401/zww/kisspng-shiba-inu-dogecoin-clip-art-doge-5ac19a4e7ef1f4.89995344152263739052.jpg" alt="" />
         <span>Fake png :(</span>
       </div>
