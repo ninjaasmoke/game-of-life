@@ -42,4 +42,5 @@ The initial pattern constitutes the seed of the system. The first generation is 
 
 2. How to handle grid type data better.
 3. How to [properly mutate state](https://github.com/ninjaasmoke/game-of-life/blob/f7ca49f5e3a25c6907556770e38934730f989492/src/App.tsx#L38) in React using [Immer](https://www.npmjs.com/package/immer).
-4. Game of Life algorithm
+4. How to work with [ChartJS](https://www.chartjs.org/).
+5. Game of Life algorithm
