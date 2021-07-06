@@ -21,7 +21,7 @@ const LeftData: React.FC = () => {
 
     const data = {
         labels: gData.map(() => {
-            if (gData.length > 10) gData.shift();
+            if (gData.length > 20) gData.shift();
             return '';
         }),
         datasets: [
