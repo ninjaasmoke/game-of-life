@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { motion } from 'framer-motion';
 import './SideBar.css';
-import { useState } from "react";
+import { useAppContext } from "./AppContext";
+import LeftData from "./LeftData";
 
 import settings from './assets/settings.png';
 import collapse from './assets/collapse.png';
-import { useRef } from "react";
-import { useAppContext } from "./AppContext";
-import LeftData from "./LeftData";
+import gh from './assets/gh.png';
 
 interface SideProps { }
 const SideBar: React.FC<SideProps> = () => {
@@ -91,6 +90,17 @@ const SideBar: React.FC<SideProps> = () => {
                         display: sideBarOpen ? 'block' : 'none',
                     }}
                 >Collapse</motion.p>
+            </div>
+            <div className="side-elem"
+                style={{ padding: '12px 0px' }}
+                title="Read More"
+                onClick={() => window.open('https://github.com/ninjaasmoke/game-of-life#conways-game-of-life', '_blank')} >
+                <motion.img
+                    src={gh}
+                    alt="Gihhub"
+                    animate={{ rotateZ: sideBarOpen ? 0 : 360 }}
+                    transition={{ duration: 0.8 }}
+                />
             </div>
         </motion.div>
     )
