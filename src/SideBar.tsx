@@ -86,6 +86,11 @@ const SideBar: React.FC<SideProps> = () => {
                     animate={{ rotateZ: sideBarOpen ? 0 : -360 }}
                     transition={{ duration: 0.8 }}
                 />
+                <motion.p
+                    animate={{
+                        display: sideBarOpen ? 'block' : 'none',
+                    }}
+                >See Doc</motion.p>
             </div>
             <div className="side-elem"
                 style={{ padding: '12px 0px' }}
