@@ -78,6 +78,17 @@ const SideBar: React.FC<SideProps> = () => {
             </motion.div>
             <div className="side-elem"
                 style={{ padding: '12px 0px' }}
+                title="Read More"
+                onClick={() => window.open('https://github.com/ninjaasmoke/game-of-life#conways-game-of-life', '_blank')} >
+                <motion.img
+                    src={gh}
+                    alt="Gihhub"
+                    animate={{ rotateZ: sideBarOpen ? 0 : -360 }}
+                    transition={{ duration: 0.8 }}
+                />
+            </div>
+            <div className="side-elem"
+                style={{ padding: '12px 0px' }}
                 onClick={() => setSideBarOpen(!sideBarOpen)} >
                 <motion.img
                     src={!sideBarOpen ? settings : collapse}
@@ -90,17 +101,6 @@ const SideBar: React.FC<SideProps> = () => {
                         display: sideBarOpen ? 'block' : 'none',
                     }}
                 >Collapse</motion.p>
-            </div>
-            <div className="side-elem"
-                style={{ padding: '12px 0px' }}
-                title="Read More"
-                onClick={() => window.open('https://github.com/ninjaasmoke/game-of-life#conways-game-of-life', '_blank')} >
-                <motion.img
-                    src={gh}
-                    alt="Gihhub"
-                    animate={{ rotateZ: sideBarOpen ? 0 : 360 }}
-                    transition={{ duration: 0.8 }}
-                />
             </div>
         </motion.div>
     )
