@@ -33,11 +33,11 @@ The initial pattern constitutes the seed of the system. The first generation is 
 
 [Read More](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
-[Visit](https://ninjaasmoke.github.io/game-of-life/)
+[Visit Site](https://ninjaasmoke.github.io/game-of-life/)
 
 ## What I learnt
 
-1. Never used ```useCallback``` React hook.
+1. Never used ```useCallback``` React hook before.
 
    * This helped me understand exactly when to use this hook.
 
